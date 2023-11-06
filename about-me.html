@@ -2,142 +2,207 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/98523245df.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="favicon" rel="icon" href="assets\icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/aboutme.css">
+    <script src="https://kit.fontawesome.com/98523245df.js" crossorigin="anonymous"></script>
     <title>Pratyush Nirwan</title>
 </head>
 
 <body>
-    <div class="top">
-        <div id="time-div">
-            <h4 id="time"></h4>
-            <h4 id="date"></h4>
-            <h4 id="greeting"></h4>
-        </div>
-    </div>
-    <div class="detail-buttons">
-        <button id="home-btn" class="bw-btn" onclick="window.location.href='index.html';">HOME</button>
-        <button id="about-me-btn" class="bw-h-btn" onclick="window.location.href='about-me.html';">ABOUT ME</button>
-        <button id="blogs-btn" class="bw-btn" onclick="window.location.href='blogs.html';">BLOGS</button>
-        <button id="projects-btn" class="bw-btn" onclick="window.location.href='projects.html';">PROJECTS</button>
-        <button id="contact-btn" class="bw-btn"onclick="window.location.href='contact.html';">CONTACT</button>
-    </div>
-<div id="detail-buttons-mobile">
-        <div id="hamburger-icon"><i class="fa-solid fa-bars"></i></div>
-        <div id="menu-page">
-            <i id="hamburger-icon-close" class="fa-solid fa-xmark"></i>
-            <div id="menu-page-buttons">
-                <h1 id="menu-page-buttons-title">PCODER.ME</h1>
-                <h1 id="m-home" data-value="Home" >Home</h1>
-                <h1 id="m-about-me" data-value="About Me">About Me</h1>
-                <h1 id="m-blogs" data-value="Blogs">Blogs</h1>
-                <h1 id="m-projects" data-value="Projects">Projects</h1>
-                <h1 id="m-contact" data-value="Contact">Contact</h1>
-            </div>
-            <h1 id="menu-page-email">email me at<br><a href="mailto:pratyushnirwan123@gmail.com"><b>pratyushnirwan123@gmail.com</b></a></h1>
-        </div>
-    </div>
-    <div id="about-me">
-        <div id="about-me-text">
-            <h2>•• ABOUT ME ――――――――――――――――</h2>
-            <p id="about-me-details">My name is Pratyush,
-                <br>and I am a passionate student of technology currently pursuing my B.Tech degree at Yeshwantrao
-                Chavan College of Engineering located in Nagpur. As a curious individual, I have always been fascinated
-                by the power of coding to create innovative solutions and bring about positive change in the world.
-
-                Over the course of my studies, I have developed a strong interest in various programming languages and
-                have honed my skills through hands-on experience. I am proud to say that I have worked on several
-                exciting coding projects that have allowed me to apply my knowledge and creativity to real-world
-                challenges. In fact, the very website you are currently viewing is one such project that I developed!
-
-                For me, technology has been a transformative force in my life, opening up new possibilities and helping
-                me to unlock my full potential. As a result, I am passionate about sharing my experiences and insights
-                with others who are learning to code. Whether you are just starting out or have been coding for years, I
-                believe that there is always something new to learn, and I am committed to helping others achieve their
-                goals in this exciting field.
-            </p>
-        </div>
-        <div id="about-me-photo-div">
-            <img src="assets/my-photo.png" id="about-me-photo">
-        </div>
-    </div>
-    <div id="mail">
-        ••<a href="mailto:pratyushnirwan123@gmail.com"> pratyushnirwan123@gmail.com</a> ――――――――――――――――
-    </div>
-    <div id="skills-languages">
-        <div id="skills">
-            <h2>•• SKILLS</h2>
-            <h3>Python</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="80"></div>
-            </div>
-            <h3>Javascript</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="75"></div>
-            </div>
-            <h3>C/C++</h3>
-            <div id="observe-me"></div>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="60"></div>
-            </div>
-            <h3>Web Development</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="90"></div>
-            </div>
-            <h3>Android Development</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="30"></div>
-            </div>
-        </div>
-        <div id="languages">
-            <h2>•• LANGUAGES</h2>
-            <h3>English</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="95"></div>
-            </div>
-            <h3>Hindi</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="95"></div>
-            </div>
-            <h3>Marathi</h3>
-            <div class="progress-bar-bg">
-            <div class="progress-bar" data-value="80"></div>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <div id="social-media-icons">
-            <form action="https://www.instagram.com/pratyush_nirwan" target="_blank">
-                <button id="instagram" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fab fa-instagram"></i></span></button>
-            </form>
-            <form action="https://www.linkedin.com/in/pratyush-nirwan-a9665224b/" target="_blank">
-                <button id="linkedin" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fab fa-linkedin"></i></span></button>
-            </form>
-            <form action="https://github.com/Pratyush-Nirwan" target="_blank">
-                <button id="github" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fab fa-github"></i></span></button>
-            </form>
-            <form action="https://www.buymeacoffee.com/pratyush123" target="_blank">
-                <button id="buymeacoffee" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fas fa-mug-hot"></i></span></button>
-            </form>
-        </div>
-        <div id="credits">
-            <p>created by pratyush with ♡ © 2023 </p>
-        </div>
-        <div id="version">
-            <p>v2.0</p>
-        </div>
+    <div id="time-div">
+        <h4 id="date">October 2, 2023</h4>
+        <h4 id="time">11:55:23</h4>
     </div>
 
-    <script src="js/about-me.js"></script>
+    <div id="menu">
+        <button class="fa-solid fa-xmark" id="menu-close"></button>
+        <div id="menu-div">
+            <h2 class="tag">&ltmenu&gt</h2>
+            <div id="menu-items">
+                <a href="index.html">
+                    <H1 class="menu-item">HOME</H1>
+                </a>
+                <a href="about-me.html">
+                    <H1 class="menu-item active">ABOUT ME</H1>
+                </a>
+                <a href="projects.html">
+                    <H1 class="menu-item">PROJECTS</H1>
+                </a>
+                <a href="blogs.html">
+                    <H1 class="menu-item">BLOGS</H1>
+                </a>
+                <a href="contact-me.html">
+                    <H1 class="menu-item">CONTACT ME</H1>
+                </a>
+            </div>
+            <h2 class="tag">&lt/menu&gt</h2>
+        </div>
+    </div>
+    <div class=dot></div>
+    <button class="fa-solid fa-bars" id="menu-open"></button>
+    <div id="about-me-page">
+        <div id="about-me">
+            <div id="about-me-text">
+                <h2 class="tag">&ltabout&gt</h2>
+                <h1 class="text">ABOUT ME_</h1>
+                <hr>
+                <p class="general" id="about-me-details">
+                    My name is Pratyush,
+                    <br>and I am a passionate student of technology currently pursuing my B.Tech degree at Yeshwantrao
+                    Chavan College of Engineering located in Nagpur. As a curious individual, I have always been
+                    fascinated
+                    by the power of coding to create innovative solutions and bring about positive change in the world.
+
+                    Over the course of my studies, I have developed a strong interest in various programming languages
+                    and
+                    have honed my skills through hands-on experience. I am proud to say that I have worked on several
+                    exciting coding projects that have allowed me to apply my knowledge and creativity to real-world
+                    challenges. In fact, the very website you are currently viewing is one such project that I
+                    developed!
+
+                    For me, technology has been a transformative force in my life, opening up new possibilities and
+                    helping
+                    me to unlock my full potential. As a result, I am passionate about sharing my experiences and
+                    insights
+                    with others who are learning to code. Whether you are just starting out or have been coding for
+                    years, I
+                    believe that there is always something new to learn, and I am committed to helping others achieve
+                    their
+                    goals in this exciting field.
+                </p>
+                <h2 class="tag">&lt/about&gt</h2>
+            </div>
+            <div id="about-me-photo">
+                <img src="assets/my-photo.png" alt="">
+            </div>
+        </div>
+        <div id="skills-languages">
+            <div id="skills">
+                <h2 class="tag">&ltskills&gt</h2>
+                <h1 class="text">SKILLS_</h1>
+                <hr>
+                <h3>Python</h3>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" data-value="80"></div>
+                </div>
+                <h3>Javascript</h3>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" data-value="75"></div>
+                </div>
+                <h3>C/C++</h3>
+                <div id="observe-me"></div>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" data-value="60"></div>
+                </div>
+                <h3>Web Development</h3>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" data-value="90"></div>
+                </div>
+                <h3>Android Development</h3>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar" data-value="30"></div>
+                </div>
+                <h2 class="tag">&lt/skills&gt</h2>
+            </div>
+            <div id="skills-icons">
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3"></i>
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-github"></i>
+                <i class="fa-solid fa-copyright"></i>
+                <i class="fa-brands fa-java"></i>
+                <i class="fa-brands fa-linux"></i>
+                <i class="fa-brands fa-npm"></i>
+                <i class="fa-brands fa-node"></i>
+            </div>
+            <div id="languages">
+                <h2 class="tag">&ltlanguages&gt</h2>
+                <h1 class="text">LANGUAGES_</h1>
+                <hr>
+                <h3>English</h3>
+                <div class="progress-bar-bg">
+                <div class="progress-bar" data-value="95"></div>
+                </div>
+                <h3>Hindi</h3>
+                <div class="progress-bar-bg">
+                <div class="progress-bar" data-value="95"></div>
+                </div>
+                <h3>Marathi</h3>
+                <div class="progress-bar-bg">
+                <div class="progress-bar" data-value="80"></div>
+                </div>
+                <h2 class="tag">&lt/languages&gt</h2>
+            </div>
+        </div>
+        <div id="intrests">
+            <h2 class="tag">&ltintrests&gt</h2>
+            <h1 class="text">INTRESTS_</h1>
+            <hr>
+            <div id="intrests-box">
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-motorcycle"></i> MOTORCYCLES
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">                    
+                        <i class="fa-solid fa-headphones"></i> MUSIC
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-camera"></i> PHOTOGRAPHY
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-clapperboard"></i> VIDEO EDITING
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-robot"></i> AI
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-terminal"></i> CODING
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-rocket"></i> SPACE
+                    </h3>
+                </div>
+                <div class="intrest">
+                    <h3 class="text">
+                        <i class="fa-solid fa-gamepad"></i> GAMING
+                    </h3>
+                </div>
+            </div>
+            <h2 class="tag">&lt/intrests&gt</h2>
+        </div>
+    </div>
+    <div id="footer">
+        <div id="socials">
+            <div id="socials-div">
+                <a href="https://www.instagram.com/pratyush_nirwan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pratyush-nirwan-a9665224b/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Pratyush-Nirwan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.buymeacoffee.com/pratyush123" target="_blank"><i class="fa-solid fa-mug-hot"></i></a>
+                <a href="mailto:pratyushnirwan123@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div id="socials-btn-div">
+                <i class="fa-solid fa-caret-right" id="socials-btn"></i>
+            </div>
+        </div>
+        <div id="credits" class="text">created by pratyush with ♡ © 2023</div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/aboutme.js"></script>
 </body>
 
 </html>
-<!-- created by pratyush with ❤️ -->

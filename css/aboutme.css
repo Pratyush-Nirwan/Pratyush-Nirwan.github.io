@@ -1,0 +1,200 @@
+#about-me-page{
+    align-self: flex-start;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30em;
+}
+#about-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 75%;
+}
+#about-me-text{
+    color: var(--blue);
+}
+#about-me-text h1{
+    text-shadow: 10px 10px 10px var(--red);
+    letter-spacing: 10px;
+}
+#about-me-text p{
+    font-size: 0.8em;
+    line-height: 20px;
+}
+#about-me-photo img {
+    width: auto;
+    height: 300px;
+    margin-left: 10px;
+    filter: drop-shadow(0px 0px 10px var(--blue));
+}
+
+#skills-languages{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    justify-content: space-between;
+    color: var(--blue);
+
+}
+#skills, #languages{
+    align-self: flex-start;
+}
+
+#skills h1, #languages h1{
+    text-shadow: 10px 10px 10px var(--red);
+    letter-spacing: 10px;
+}
+
+#skills h3, #languages h3{
+    font-weight: lighter;
+    font-family: 'Martian Mono', monospace;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 10px;
+    background-color:var(--blue);
+    margin-bottom: 10px;
+    margin-right: 50%;
+    border-radius: 10px;
+}
+
+.progress-bar-bg {
+    border: 1px solid var(--blue);
+    height: 10px;
+    width: 15em;
+    margin-right: 50%;
+    border-radius: 10px;
+}
+
+#skills-icons{
+    align-self: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 50px;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+}
+#skills-icons i{
+    display: inline-grid;
+    text-align: center;
+    filter: drop-shadow(10px 10px 10px var(--red));
+}
+#intrests{
+    flex-direction: column;
+    width: 75%;
+    color: var(--blue);
+}
+#intrests h1{
+    text-shadow: 10px 10px 10px var(--red);
+    letter-spacing: 10px;
+}
+#intrests hr {
+    margin-bottom: 20px;
+}
+#intrests-box{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 50px;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.intrest{
+    border: 1px solid var(--blue);
+    border-radius: 25px;
+    min-width: 200px;
+}
+.intrest h3{
+    margin: 10px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #about-me-page{
+        padding-top: 15em;
+    }
+    #about-me{
+        font-size: 0.8em;
+        display: flex;
+        flex-direction: column;
+    }
+    #about-me h1{
+        text-align: center;
+    }
+    #about-me-photo{
+        order: 1;
+        display: contents;
+    }
+    #about-me-photo img{
+        height: auto;
+        width: 75%;
+    }
+    #about-me-text{
+        order: 2;
+    }
+    #skills-languages{
+        font-size: 0.8em;
+        flex-direction: column;
+    }
+    #skills-languages h1{
+        text-align: center;
+    }
+    #skills{
+        width: 100%;
+        order: 2;
+        flex-direction: row;
+    }
+    #skills-icons{
+        grid-template-rows: auto auto ;
+        grid-template-columns: auto auto auto auto auto;
+        order:1;
+        column-gap: 20px;
+    }
+    #languages{
+        flex-direction: row;
+        order: 3;
+    }
+    #intrests-box{
+        grid-template-columns: auto auto;
+    }
+    .intrest{
+        min-width: 10px;
+    }
+    .intrest h3{
+        font-size: 0.6em;
+    }
+    .progress-bar-bg{
+        width: 100%;
+        margin: 0;
+    }
+    .progress-bar{
+        margin: 0;
+    }
+}

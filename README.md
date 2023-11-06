@@ -1,6 +1,6 @@
 # My Portfolio Website 🌐
-![website screenshot](assets/websiteScreenshot.png)
-Welcome to my minimal and monochromatic themed portfolio website! This is the central hub where you can explore my work, read my blogs, and connect with me on various social platforms.
+![website screenshot](assets/github/websiteScreenshot.png)
+Welcome to my minimal portfolio website! This is the central hub where you can explore my work, read my blogs, and connect with me on various social platforms.
 
 ## Features
 - **Projects**: Browse through a collection of my latest projects, showcasing my skills and expertise.

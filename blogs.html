@@ -2,83 +2,80 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/98523245df.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="favicon" rel="icon" href="assets\icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/blogs.css">
+    <script src="https://kit.fontawesome.com/98523245df.js" crossorigin="anonymous"></script>
     <title>Pratyush Nirwan</title>
 </head>
 
 <body>
-    <div class="top">
-        <div id="time-div">
-            <h4 id="time"></h4>
-            <h4 id="date"></h4>
-            <h4 id="greeting"></h4>
-        </div>
+    <div id="time-div">
+        <h4 id="date">October 2, 2023</h4>
+        <h4 id="time">11:55:23</h4>
     </div>
-    <div class="detail-buttons">
-        <button id="home-btn" class="bw-btn" onclick="window.location.href='index.html';">HOME</button>
-        <button id="about-me-btn" class="bw-btn" onclick="window.location.href='about-me.html';">ABOUT ME</button>
-        <button id="blogs-btn" class="bw-h-btn" onclick="window.location.href='blogs.html';">BLOGS</button>
-        <button id="projects-btn" class="bw-btn" onclick="window.location.href='projects.html';">PROJECTS</button>
-        <button id="contact-btn" class="bw-btn" onclick="window.location.href='contact.html';">CONTACT</button>
-    </div>
-<div id="detail-buttons-mobile">
-        <div id="hamburger-icon"><i class="fa-solid fa-bars"></i></div>
-        <div id="menu-page">
-            <i id="hamburger-icon-close" class="fa-solid fa-xmark"></i>
-            <div id="menu-page-buttons">
-                <h1 id="menu-page-buttons-title">PCODER.ME</h1>
-                <h1 id="m-home" data-value="Home" >Home</h1>
-                <h1 id="m-about-me" data-value="About Me">About Me</h1>
-                <h1 id="m-blogs" data-value="Blogs">Blogs</h1>
-                <h1 id="m-projects" data-value="Projects">Projects</h1>
-                <h1 id="m-contact" data-value="Contact">Contact</h1>
+    <a href="mailto:pratyushnirwan123@gmail.com">
+    </a>
+    <div id="menu">
+        <button class="fa-solid fa-xmark" id="menu-close"></button>
+        <div id="menu-div">
+            <h2 class="tag">&ltmenu&gt</h2>
+            <div id="menu-items">
+                <a href="index.html">
+                    <H1 class="menu-item">HOME</H1>
+                </a>
+                <a href="about-me.html">
+                    <H1 class="menu-item">ABOUT ME</H1>
+                </a>
+                <a href="projects.html">
+                    <H1 class="menu-item">PROJECTS</H1>
+                </a>
+                <a href="blogs.html">
+                    <H1 class="menu-item active">BLOGS</H1>
+                </a>
+                <a href="contact-me.html">
+                    <H1 class="menu-item">CONTACT ME</H1>
+                </a>
             </div>
-            <h1 id="menu-page-email">email me at<br><a href="mailto:pratyushnirwan123@gmail.com"><b>pratyushnirwan123@gmail.com</b></a></h1>
+            <h2 class="tag">&lt/menu&gt</h2>
         </div>
     </div>
-    <div id="blogs">
-        <h2>•• BLOGS ―――――――――――――――――――</h2>
-        <p>I write blogs on Dev.to, a platform where developers share knowledge and experiences. Check out my articles on software development topics, and feel free to reach out with questions or suggestions. </p>
+    <div class=dot></div>
+    <div class="cursor">
+        <div class="cursor-inner"></div>
+    </div>
+    <button class="fa-solid fa-bars" id="menu-open"></button>
+    <div id="blogs-page">
+        <h2 class="tag">&ltblogs&gt</h2>
+        <h1 class="text">BLOGS_</h1>
+        <hr>
+        <div id="loading"><i class="fa-solid fa-spinner fa-spin-pulse"></i></div>
         <div id="blogs-grid">
-        </div>
-    </div>
-    <div id="mail">
-        ••<a href="mailto:pratyushnirwan123@gmail.com"> pratyushnirwan123@gmail.com</a> ――――――――――――――――
-    </div>
-    <div class="footer">
-        <div id="social-media-icons">
-            <form action="https://www.instagram.com/pratyush_nirwan" target="_blank">
-                <button id="instagram" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fab fa-instagram"></i></span></button>
-            </form>
-            <form action="https://www.linkedin.com/in/pratyush-nirwan-a9665224b/" target="_blank">
-                <button id="linkedin" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fab fa-linkedin"></i></span></button>
-            </form>
-            <form action="https://github.com/Pratyush-Nirwan" target="_blank">
-                <button id="github" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fab fa-github"></i></span></button>
-            </form>
-            <form action="https://www.buymeacoffee.com/pratyush123" target="_blank">
-                <button id="buymeacoffee" class="transparent-button"><span style="font-size: 7mm;"><i
-                            class="fas fa-mug-hot"></i></span></button>
-            </form>
-        </div>
-        <div id="credits">
-            <p>created by pratyush with ♡ © 2023 </p>
-        </div>
-        <div id="version">
-            <p>v2.0</p>
-        </div>
-    </div>
 
+        </div>
+        <h2 class="tag">&lt/blogs&gt</h2>
+    </div>
+    <div id="footer">
+        <div id="socials">
+            <div id="socials-div">
+                <a href="https://www.instagram.com/pratyush_nirwan" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/pratyush-nirwan-a9665224b/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Pratyush-Nirwan" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.buymeacoffee.com/pratyush123" target="_blank"><i
+                        class="fa-solid fa-mug-hot"></i></a>
+                <a href="mailto:pratyushnirwan123@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <div id="socials-btn-div">
+                <i class="fa-solid fa-caret-right" id="socials-btn"></i>
+            </div>
+        </div>
+        <div id="credits" class="text">created by pratyush with ♡ © 2023</div>
+    </div>
+    <script src="js/common.js"></script>
     <script src="js/blogs.js"></script>
 </body>
 
 </html>
-<!-- created by pratyush with ❤️ -->

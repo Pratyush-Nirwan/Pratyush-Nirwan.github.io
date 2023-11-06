@@ -1,0 +1,51 @@
+{
+    "projects": [
+        {
+            "name": "Pcoder.me",
+            "description": "Its my portfolio website! This is the central hub where you can explore my work, read my blogs, and connect with me on various social platforms.",
+            "github_link": "https://github.com/Pratyush-Nirwan/Pratyush-Nirwan.github.io",
+            "thumbnail": "assets/projects/pcoder.me.png"
+        },
+        {
+            "name": "Advice Ticket",
+            "description": "It's a web application that provides users with random pieces of advice. It generates a unique advice number and a QR code for each piece of advice, making it a fun and interactive way to discover helpful insights.",
+            "github_link": "https://github.com/Pratyush-Nirwan/AdviceTicket",
+            "demo_link": "https://pcoder.me/AdviceTicket",
+            "thumbnail": "assets/projects/adviceTicket.png"
+        },
+        {
+            "name": "EncryptDecrypt",
+            "description": "The Encrypt Decrypt Web Application is a simple web tool that allows users to encrypt and decrypt messages using AES encryption with a randomly generated key. It provides a user-friendly interface for secure message handling.",
+            "github_link": "https://github.com/Pratyush-Nirwan/EncryptDecrypt",
+            "demo_link": "https://pcoder.me/EncryptDecrypt",
+            "thumbnail": "assets/projects/encryptDecrypt.png"
+        },
+        {
+            "name": "Weather Website",
+            "description": "It's a simple weather application that allows users to check the current weather conditions for a specified city. Users can enter the name of a city, and the application will display the temperature, weather description, humidity, and wind speed for that location. Additionally, the application provides weather condition icons for a more visual representation.",
+            "github_link": "https://github.com/Pratyush-Nirwan/weather-website",
+            "thumbnail": "assets/projects/weatherWebsite.png"
+        },
+        {
+            "name": "Temprature Converter",
+            "description": "This is a simple Java application that allows users to convert temperatures between Celsius and Fahrenheit using a graphical user interface (GUI).",
+            "github_link": "https://github.com/Pratyush-Nirwan/Temperature-converter",
+            "demo_link": "",
+            "thumbnail": "assets/projects/404.png"
+        },
+        {
+            "name": "Expense Tracker",
+            "description": "Expense Tracker is a simple command-line program written in C that allows users to manage their income and expenses. Users can log in or register, record their income, add expenses in various categories, view their expenses, and check their current balance.",
+            "github_link": "https://github.com/Pratyush-Nirwan/Expense-Tracker",
+            "demo_link": "",
+            "thumbnail": "assets/projects/expenseTracker.png"
+        },
+        {
+            "name": "HTML Calculator",
+            "description": "This is a simple web application for performing basic math operations: addition, subtraction, multiplication, and division. It provides a user-friendly interface to enter two numbers and get the result of the selected operation.",
+            "github_link": "https://github.com/Pratyush-Nirwan/Html-Calculator",
+            "demo_link": "",
+            "thumbnail": "assets/projects/htmlCalc.png"
+        }
+    ]
+}

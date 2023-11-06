@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Dela+Gothic+One&family=Martian+Mono:wght@400;800&family=Mooli&display=swap');
+
+:root {
+    --red: #ff0000;
+    --blue: #0aefff;
+    --yellow: #deff0a;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+::selection{
+    background: var(--blue);
+ }
+html,
+body {
+    min-height: 100%;
+    min-width: 100%;
+    user-select: none;
+}
+
+.stop-scrolling {
+    overflow: hidden;
+}
+
+.dot {
+    visibility: hidden;
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 100%;
+    background-color: var(--blue);
+    opacity: 10%;
+    filter: blur(100px);
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    background: black;
+    margin: 0;
+    user-select: none;
+}
+
+* {
+    font-family: 'Dela Gothic One', cursive;
+}
+
+hr {
+    border: 1px solid var(--blue);
+}
+
+#time-div {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    color: var(--blue);
+    border-left: 2px solid var(--blue);
+    padding-left: 10px;
+    filter: drop-shadow(0px 0px 30px var(--blue));
+}
+
+#time-div * {
+    font-size: 12px;
+    font-family: 'Martian Mono', monospace;
+}
+
+#date {
+    margin: 0;
+    margin-top: 10px;
+}
+
+#time {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+
+.tag {
+    user-select: none;
+    opacity: 50%;
+    color: var(--red);
+    font-family: 'Dawning of a New Day', cursive;
+}
+
+.text {
+    font-family: 'Mooli', sans-serif;
+}
+
+.general {
+    font-family: 'Martian Mono', monospace;
+}
+
+#menu-open,
+#menu-close {
+    filter: drop-shadow(0px 0px 10px var(--blue));
+    background: transparent;
+    border: 0;
+    color: var(--blue);
+    font-size: 1.5em;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+
+#menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    backdrop-filter: blur(20px);
+    display: none;
+    align-items: center;
+
+}
+
+#menu-items {
+    padding-left: 2em;
+}
+
+#menu-items a {
+    text-decoration: none;
+}
+
+#menu-div {
+    padding: 2em;
+}
+
+.menu-item {
+    font-family: 'Martian Mono', monospace;
+    text-decoration: none;
+    color: var(--blue);
+    transition: transform 0.5s ease, text-shadow 0.5s ease;
+}
+
+.active {
+    text-shadow: 10px 10px 10px var(--red);
+}
+
+.active:hover {
+    text-shadow: none;
+}
+
+.menu-item:hover {
+    text-shadow: none;
+    transform: translateX(50px);
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    justify-content: space-between;
+    filter: drop-shadow(0px 0px 30px var(--blue));
+}
+
+#socials {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    left: -10em;
+    bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--blue);
+    transition: all 0.5s ease;
+}
+
+#socials a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--blue);
+    padding-right: 20px;
+    transition: text-shadow 0.2s ease, transform 0.3s ease;
+}
+
+#socials a:hover {
+    text-shadow: 0px 10px 10px var(--red);
+    transform: translateY(-5px);
+}
+
+#socials-div {
+    padding-left: 10px;
+    border: 2px solid var(--blue);
+    border-left: 0px;
+}
+
+
+#socials-btn-div {
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#socials-btn {
+    transition: transform 1s ease, color 1s ease;
+
+}
+
+#socials-btn:hover {
+    color: var(--red);
+    transform: translateX(5px);
+}
+
+#credits {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    padding-right: 10px;
+    color: var(--blue);
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    text-orientation: sideways;
+}
+
+@keyframes infiniteScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #credits {
+display: none;
+    }
+
+    html,
+    body {
+        height: 50%;
+        width: 50%;
+    }
+    #date{
+        margin-top: 0;
+    }
+    #time{
+        margin-bottom: 0;
+    }
+    #time-div *{
+        font-size: 0.5em;
+    }
+    #socials-btn:hover {
+        color: var(--blue);
+        transform: translateX(5px);
+    }
+    #menu-div{
+        align-self: flex-start;
+    }
+    .tag{
+        opacity: 30%;
+    }
+}

@@ -1,0 +1,303 @@
+.card {
+    position: relative;
+    color: rgb(255, 255, 255);
+    padding: 5em;
+    border: 2px solid var(--blue);
+    box-shadow: 10px 10px var(--blue);
+    transition: box-shadow 0.5s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 0px var(--blue);
+}
+
+#buttons {
+    position: absolute;
+    top: -30px;
+    right: 5px;
+    filter: drop-shadow(0px 0px 5px var(--blue));
+}
+
+.terminal-btn {
+    text-align: center;
+    height: 15px;
+    width: 15px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    display: inline-block;
+}
+#term-cur{
+    animation: blink 0.7s infinite;
+}
+#name {
+    padding-right: 30px;
+}
+
+#name-text {
+    font-family: 'Martian Mono', monospace;
+}
+
+#name-text * {
+    font-family: 'Martian Mono', monospace;
+
+}
+
+#name-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#dd {
+    margin-left: 5px;
+    font-size: 10px;
+    letter-spacing: 5px;
+}
+
+#photo{
+    width: auto;
+    height: 300px;
+    filter: drop-shadow(0px 0px 10px var(--blue));
+    transition: transform 1s ease;
+}
+
+#photo:hover{
+    transform: rotate(25deg);
+}
+
+#its-me{
+    height: auto;
+    width: 100px;
+    position: absolute;
+    top:20px;
+    right: 20px;
+    filter: drop-shadow(0px 0px 10px var(--blue));
+    transform: rotate(-25deg);
+}
+
+#console {
+    font-family: 'Martian Mono', monospace;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    margin: 0;
+    font-size: 10px;
+    color: var(--blue);
+}
+
+#quote {
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 10px;
+    border: 2px solid var(--blue);
+    background: var(--blue);
+    color: black;
+    transition: background 1s ease, color 1s ease, box-shadow 0.5s ease;
+}
+
+#quote:hover {
+    background: transparent;
+    color: var(--blue);
+}
+
+#P {
+
+    font-size: 1.5em;
+    text-shadow: 3px 3px var(--blue), -3px -3px var(--red);
+    transition: text-shadow 0.5s ease;
+}
+
+#P:hover {
+    text-shadow: -5px -5px var(--blue), 5px 5px var(--red);
+}
+
+
+.bar {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 20px;
+    max-width: 20%;
+    max-height: 30px;
+    overflow: hidden;
+    border: 2px solid var(--blue);
+    color: white;
+    font-size: 15px;
+    display: flex;
+    filter: drop-shadow(0px 0px 30px var(--blue));
+}
+
+.bar_content {
+    font-family: 'Martian Mono', monospace;
+    color: var(--blue);
+    animation-name: infiniteScroll;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    white-space: nowrap;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blink {
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+
+pre {
+  padding: 0;
+  margin: 0;
+}
+
+.load {
+    z-index: 9999;
+    position: fixed;
+  margin: 0 auto;
+  min-height: 100%;
+  width: 100%;
+  background: black;
+    display: none;
+}
+
+.term {
+  font-family: 'Martian Mono', monospace;
+  color: var(--blue);
+  opacity: 0.8;
+  font-size: 0.7em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.term:after {
+  content: "_";
+  opacity: 1;
+  animation: cursor 1s infinite;
+}
+
+.term hr{
+    width: 50%;
+   margin: 0;
+}
+
+@keyframes cursor {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+    }
+    .card:hover{
+        box-shadow: 10px 10px var(--blue); 
+    }
+    #name{
+        font-size: 0.4em;
+        text-align: center;
+        padding-right: 0px;
+        padding-bottom: 30px;
+    }
+    #name-text{
+        font-size: 4em;
+    }
+    #dd{
+        font-size: 1.2em;
+        letter-spacing: 0.3em;
+    }
+    .tag{
+        text-align: left;
+    }
+    #quote{
+        font-size: 1em;
+        padding: 0.5em;
+    }
+    #quote:hover {
+        background: var(--blue);
+        color: black;
+    }
+    #image{
+        display: flex;
+        justify-content: center;
+    }
+    #image img{
+        height: auto;
+        width: 90%;
+    }
+    #image img:hover {
+        transform: rotate(0deg);
+    }
+    #its-me{
+        top: 250px;
+        right: 20px;
+        height: auto;
+        width: 50px;
+    }
+    .bar{
+        position: absolute;
+        top: -50px;
+        left:0;
+        transform: translateX(-2px);
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        font-size: 0.5em;
+        max-width: 50%;
+    }
+    .term{
+        font-size: 5px;
+        padding-left: 10px;
+    }
+  }

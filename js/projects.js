@@ -1,101 +1,74 @@
-const instagram = document.querySelector('#instagram');
-const linkedin = document.querySelector('#linkedin');
-const github = document.querySelector('#github');
-const body = document.querySelector('body');
+const projectCardsDiv = document.getElementById('project-cards');
 
-function updateTime() {
-  const hour = new Date().getHours();
-  var greeting;
-  if (hour < 12) {
-    greeting = `Good Morning! <i class="fa-solid fa-mug-saucer"></i>`
-  } else if (hour < 18) {
-    greeting = `Good Afternoon! <i class="fa-solid fa-sun-plant-wilt"></i>`
-  } else {
-    greeting = `Good Evening! <i class="fa-solid fa-cloud-moon"></i>`
-  }
+  fetch('assets/projects.json')
+    .then(response => response.json())
+    .then(data => {
+      data.projects.forEach(function(project) {
+        const projectCard = document.createElement('div');
+        projectCard.className = "project-card";
 
-  var datetime = new Date().toLocaleTimeString();
-  document.getElementById("time").textContent = datetime;
-  const options = {
-    weekday: 'long',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  };
-  const date = new Date().toLocaleString('en-IN', options);
-  document.getElementById("date").textContent = date;
-  document.getElementById("greeting").innerHTML = greeting;
-}
-updateTime();
-setInterval(updateTime, 1000);
-function typerWriter(id) {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ~`@#$%^&*_+-=<>!{}[]()";
-  const element = document.getElementById(id);
-  const text = element.getAttribute("data-value");
-  let iterations = 0;
-  const letterInter = setInterval(() => {
-    element.innerHTML = text.split("").map((letter, index) => {
-      if (index < iterations) {
-        return text[index];
+        const projectImg = document.createElement('img');
+        projectImg.src = project.thumbnail;
+        projectCard.appendChild(projectImg);
+
+        const projectText = document.createElement('div');
+        projectText.className = 'project-text';
+        projectCard.appendChild(projectText);
+
+        const name = document.createElement('h3');
+        name.className = 'text';
+        name.innerHTML = project.name.toUpperCase();
+        projectText.appendChild(name);
+
+        const desc = document.createElement('p');
+        desc.className = 'general';
+        desc.innerHTML = truncateText(project.description);
+        projectText.appendChild(desc);
+
+        const projectLinks = document.createElement('div');
+        projectLinks.className = 'project-links'
+        projectText.appendChild(projectLinks);
+
+        const githubLink = document.createElement('a')
+        githubLink.href = project.github_link;
+        githubLink.innerHTML = '<i class="fa-brands fa-github"></i>';
+        githubLink.target = '_blank';
+        projectLinks.appendChild(githubLink);
+
+        if(project.demo_link){
+          const demo = document.createElement('a');
+          demo.href = project.demo_link;
+          demo.innerHTML = 'DEMO'
+          demo.className = 'text'
+          demo.target = '_blank';
+          projectLinks.appendChild(demo)
+        }
+        projectCardsDiv.appendChild(projectCard);
+        cardObserver.observe(projectCard);
+      });
+      const end = document.createElement('h2');
+      end.innerHTML = '&lt/projects&gt';
+      end.className = 'tag';
+      projectCardsDiv.appendChild(end);
+    })
+
+    function truncateText(text) {
+      if (text.length <= 100) {
+        return text;
       }
-      return letters[Math.floor(Math.random() * letters.length)];
-    }).join("");
-    if (iterations >= text.length) clearInterval(letterInter);
-    iterations += 1 / 3;
-  }, 30);
-}
+      return text.slice(0, 100 - 3) + "...";
+    }
 
-const hamburgerIcon = document.getElementById('hamburger-icon');
-const menuPage = document.getElementById('menu-page');
-const hamburgerIconClose = document.getElementById('hamburger-icon-close');
-hamburgerIcon.addEventListener('click', function() {
-    menuPage.style.display = 'flex';
-});
+    function activateProjectCards(entries, observer) {
+      entries.forEach((entry) => {
 
-hamburgerIconClose.addEventListener('click', function() {
-    menuPage.style.display = 'none';
-});
-
-const mHome = document.getElementById('m-home');
-mHome.addEventListener('click', function(){
-  typerWriter('m-home')
-  setTimeout(() => {
-    window.location.href = "./index.html";
-  }, 500);
-})
-const mAboutMe = document.getElementById('m-about-me');
-mAboutMe.addEventListener('click', function(){
-  typerWriter('m-about-me')
-  setTimeout(() => {
-    window.location.href = "./about-me.html";
-  }, 500);
-})
-const mBlogs = document.getElementById('m-blogs');
-mBlogs.addEventListener('click', function(){
-  typerWriter('m-blogs')
-  setTimeout(() => {
-    window.location.href = "./blogs.html";
-  }, 500);
-})
-const mProjects = document.getElementById('m-projects');
-mProjects.addEventListener('click', function(){
-  typerWriter('m-projects')
-  setTimeout(() => {
-    window.location.href = "./projects.html";
-  }, 500);
-})
-const mContact = document.getElementById('m-contact');
-mContact.addEventListener('click', function(){
-  typerWriter('m-contact')
-  setTimeout(() => {
-    window.location.href = "./contact.html";
-  }, 500);
-})
-console.log(` 
-█▀█ █▀█ ▄▀█ ▀█▀ █▄█ █░█ █▀ █░█
-█▀▀ █▀▄ █▀█ ░█░ ░█░ █▄█ ▄█ █▀█
-          ▀█▀ █▀▀ █▀█ █▀▄▀█ █ █▄░█ ▄▀█ █░░
-          ░█░ ██▄ █▀▄ █░▀░█ █ █░▀█ █▀█ █▄▄ v2.08]
-Welcome!!❤️`)
-
-//created by Pratyush with ❤️
+        if (entry.isIntersecting) {
+          entry.target.classList.add('project-card-enter');
+        return;
+        }else if (entry.boundingClientRect.top > 0) {
+          entry.target.classList.remove('project-card-enter');
+        }
+      });
+    }
+    const cardObserver = new IntersectionObserver(activateProjectCards);
+    

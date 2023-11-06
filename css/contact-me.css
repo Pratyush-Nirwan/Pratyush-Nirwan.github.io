@@ -1,0 +1,74 @@
+#contacts-page{
+    align-self: flex-start;
+    margin-top: 5em;
+    color: var(--blue);
+    width: 75%;
+}
+#contacts-page h1{
+    text-shadow: 10px 10px 10px var(--red);
+    letter-spacing: 10px;
+}
+
+#contacts-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#contacts-div hr {
+    margin: 20px;
+}
+
+#contact-msg{
+    width: 50%;
+    font-size: 1.3em;
+    line-height: 2em;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-info{
+    display: grid;
+    grid-template-columns: auto auto ;
+    font-size: 3em;
+    text-align: center;
+    column-gap: 2em;
+    row-gap: 1.5em;
+    margin: 1em;
+}
+
+#contact-info a{
+    color: var(--blue);
+    filter: drop-shadow(10px 10px 10px var(--red));
+    transition: scale 0.5s ease, filter 0.5s ease;
+}
+#contact-info a:hover{
+    scale: 1.5;
+    filter: drop-shadow(0px 0px 10px var(--red));
+}
+@media only screen and (max-width: 600px) {
+    #contacts-div{
+        flex-direction: column;
+    }
+    #contacts-div p{
+        font-size: 0.8em;
+    }
+    #contact-msg{
+        width: 100%;
+        line-height: 1em;
+    }
+    #contacts-div hr {
+        margin: 0;
+    }
+    #contact-info{
+        margin: 0;
+        margin-top: 10px;
+        grid-template-columns: auto auto auto auto;
+        column-gap: 10px;
+    }
+    #contact-info a:hover{
+        scale:1;
+        filter: drop-shadow(10px 10px 10px var(--red));
+    }
+}
